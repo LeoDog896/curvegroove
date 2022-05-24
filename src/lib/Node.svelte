@@ -26,5 +26,5 @@
 {:else if node.type == "rectangle"}
   <div use:nodeaction={node} style="width: {node.width}px; height: {node.height}px;" class="position-fixed bg-info {activeClass}"></div>
 {:else if node.type == "oval"}
-  <div use:nodeaction={node} style="width: {node.width}px; height: {node.height}px;" class="position-fixed rounded-full bg-info {activeClass}"></div>
+  <div use:nodeaction={node} style="width: {node.width}px; height: {node.height}px;" class="position-fixed rounded-circle bg-info {activeClass}"></div>
 {/if}
