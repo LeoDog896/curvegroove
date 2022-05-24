@@ -33,6 +33,15 @@
       }]
     }}>Add Oval</button>
   </div>
+  <div class="inline p-8 border-gray-300 w-full">
+    <button on:click={() => {
+      activeScene.nodes = [...activeScene.nodes, {
+        type: "text",
+        content: "Hello World!",
+        position: { x: 0, y: 0 }
+      }]
+    }}>Add Text</button>
+  </div>
 </div>
 {#each activeScene.nodes as node}
   <NodeElem {node}></NodeElem>
