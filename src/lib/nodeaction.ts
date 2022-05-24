@@ -1,7 +1,10 @@
 import { draggable } from '@neodrag/svelte';
 import type { Node } from "$lib/node"
+import type { Action } from 'svelte/action';
 
-export const nodeaction = (elem: HTMLElement, node: Node) => {
+export const nodeaction: Action<HTMLElement, Node> = (elem, node) => {
+  if (!node) return
+
   const drag = draggable(elem, {
     position: node.position,
     onDrag: (event) => {
