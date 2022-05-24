@@ -41,7 +41,7 @@
 </script>
 <div>
   {#each buttons as button}
-    <div class="inline p-8 border-gray-300 w-full">
+    <div class="d-inline p-4 border border-secondary w-100">
       <button on:click={() => {
         activeScene.nodes = [...activeScene.nodes, {
           ...button.defaultNode,
