@@ -51,6 +51,6 @@
     </div>
   {/each}
 </div>
-{#each activeScene.nodes as node}
+{#each activeScene.nodes as node (node)}
   <NodeElem {node}></NodeElem>
 {/each}

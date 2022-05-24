@@ -13,10 +13,6 @@ export const nodeaction: Action<HTMLElement, Node> = (elem, node) => {
     }
   })
 
-  elem.addEventListener("click", () => {
-    node.selected = !node.selected;
-  });
-
   return {
     destroy: () => {
       drag.destroy()
