@@ -10,6 +10,10 @@ export const nodeaction = (elem: HTMLElement, node: Node) => {
     }
   })
 
+  elem.addEventListener("dblclick", () => {
+    node.selected = !node.selected;
+  })
+
   return {
     destroy: () => {
       drag.destroy()
