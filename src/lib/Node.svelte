@@ -2,7 +2,7 @@
   import { nodeaction } from './nodeaction';
   import type { Node } from "$lib/node";
   
-  $: activeClass = node.selected ? "border border-gray-300" : ""
+  $: activeClass = node.selected ? "border border-primary" : ""
 
   export let node: Node;
 </script>
