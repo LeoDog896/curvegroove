@@ -12,13 +12,13 @@
   {#if node.editable}
     <input use:nodeaction={node} bind:value={node.content} placeholder="Edit text" on:blur={() => { node.editable = false }}/>
   {:else}
-    <p class="fixed {activeClass}" on:dblclick={() => {
+    <p class="position-fixed {activeClass}" on:dblclick={() => {
       node.editable = !node.editable;
     }} use:nodeaction={node}>{node.content}</p>
   {/if}
 
 {:else if node.type == "image"}
-  <img class="fixed {activeClass}" use:nodeaction={node} src={node.src} alt={node.alt}/>
+  <img class="position-fixed {activeClass}" use:nodeaction={node} src={node.src} alt={node.alt}/>
 {:else if node.type == "group"}
   {#each node.nodes as loopNode}
     <svelte:self node={loopNode}/>
