@@ -10,7 +10,7 @@
 {#if node.type == "text"}
 
   {#if node.editable}
-    <input bind:value={node.content} placeholder="Edit text" on:blur={() => { node.editable = false }}/>
+    <input use:nodeaction={node} bind:value={node.content} placeholder="Edit text" on:blur={() => { node.editable = false }}/>
   {:else}
     <p class="fixed {activeClass}" on:dblclick={() => {
       node.editable = !node.editable;
